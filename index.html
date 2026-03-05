@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/logo-kimasu.avif" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kimasu | Melbourne</title>
+  <meta name="description"
+    content="Kimasu is a Melbourne-based authentic Modern Asian Eatery that combines flavors with no limits. Japanese rice bowls & sandos. Loaded fries with a twist of authentic Asian flavors. We also make boba tea, ice cream & waffle stacks." />
+  <meta property="og:title" content="Kimasu | Melbourne" />
+  <meta property="og:description"
+    content="Kimasu is a Melbourne-based authentic Modern Asian Eatery that combines flavors with no limits." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Bebas+Neue&family=Dancing+Script:wght@700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <img src="/logo-kimasu.avif" alt="Kimasu - Modern Asian Eatery" class="logo-img" />
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="https://www.meandu.app/kimasu/delivery" target="_blank" rel="noopener">ORDER ONLINE</a></li>
+        <li><a href="#menu">BROWSE MENU</a></li>
+        <li><a href="/join-our-team.html">JOIN OUR TEAM</a></li>
+        <li><a href="#about-us">ABOUT US</a></li>
+      </ul>
+      <div class="nav-social">
+        <a href="https://www.tiktok.com/@kimasu_eatery" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.35 6.35 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z" />
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/kimasu_eatery/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+          </svg>
+        </a>
+        <a href="https://www.facebook.com/kimasu.eatery" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+          </svg>
+        </a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="hero">
+    <div class="hero-decorations">
+      <!-- Neon flowers: top-left and bottom-center -->
+      <img src="/images/neon-flowers.svg" alt="" class="neon-flower neon-flower-top-left" aria-hidden="true" />
+      <img src="/images/neon-flowers.svg" alt="" class="neon-flower neon-flower-bottom-center" aria-hidden="true" />
+      <!-- Neon leaves: bottom-left and top-right -->
+      <img src="/images/neon-leaf.svg" alt="" class="neon-leaf neon-leaf-bottom-left" aria-hidden="true" />
+      <img src="/images/neon-leaf.svg" alt="" class="neon-leaf neon-leaf-top-right" aria-hidden="true" />
+    </div>
+    <div class="hero-content">
+      <!-- Badge (logo badge) in center -->
+      <div class="hero-badge-container">
+        <img src="/images/kimasu-badge.svg" alt="Kimasu Modern Asian Eatery" class="hero-badge" />
+      </div>
+      <!-- Food icons SVG below badge -->
+      <div class="hero-icons">
+        <img src="/images/food-icons.svg" alt="Kimasu Food Categories" class="food-icons-svg" />
+      </div>
+      <a href="https://www.meandu.app/kimasu/delivery" target="_blank" rel="noopener" class="btn-order-now"
+        id="btn-order-now">
+        Order Now
+      </a>
+    </div>
+  </section>
+
+  <!-- MENU SECTION -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <div class="menu-header">
+        <h2 class="section-title">KIMASU MENU <span class="chopstick-icon"><img src="/images/chopstick-icon.avif" alt=""
+              class="chopstick-img"></span></h2>
+      </div>
+      <div class="menu-tabs">
+        <button class="tab-btn" data-tab="sides" id="tab-sides">
+          <div class="tab-img-wrapper"><img src="/images/menu-categories/cat-sides.svg" alt="Sides & Sharing"></div>
+          <span>Sides &amp; Sharing</span>
+        </button>
+        <button class="tab-btn" data-tab="poke" id="tab-poke">
+          <div class="tab-img-wrapper"><img src="/images/menu-categories/cat-poke.svg" alt="Poke Bowls"></div>
+          <span>Poke Bowls</span>
+        </button>
+        <button class="tab-btn active" data-tab="rice" id="tab-rice">
+          <div class="tab-img-wrapper"><img src="/images/menu-categories/cat-rice.svg" alt="Rice Bowls"></div>
+          <span>Rice Bowls</span>
+        </button>
+        <button class="tab-btn" data-tab="noodles" id="tab-noodles">
+          <div class="tab-img-wrapper"><img src="/images/menu-categories/cat-noodles.svg" alt="Noodle Bowls"></div>
+          <span>Noodle Bowls</span>
+        </button>
+        <button class="tab-btn" data-tab="fries" id="tab-fries">
+          <div class="tab-img-wrapper"><img src="/images/menu-categories/cat-fries.png" alt="Fries & Sliders"></div>
+          <span>Fries &amp; Sliders</span>
+        </button>
+      </div>
+      <div class="menu-carousel-wrapper">
+        <button class="carousel-btn left-btn" id="scroll-left" aria-label="Scroll left">&#10094;</button>
+        <div class="menu-carousel" id="menu-carousel">
+          <!-- Items injected by JS -->
+        </div>
+        <button class="carousel-btn right-btn" id="scroll-right" aria-label="Scroll right">&#10095;</button>
+      </div>
+      <div class="menu-browse-btn-wrap">
+        <a href="/menu.html" class="btn-browse-menu" id="btn-browse-menu">browse FULL menu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS SECTION -->
+  <section class="reviews-section" id="reviews">
+    <div class="reviews-container">
+      <div class="reviews-left">
+        <p class="reviews-eyebrow">GOOGLE REVIEWS</p>
+        <h2 class="reviews-title">WHAT OUR CUSTOMERS SAY ABOUT US</h2>
+
+        <div class="reviews-list">
+
+          <div class="review-card">
+            <div class="reviewer-info">
+              <div class="reviewer-avatar-wrap">
+                <img src="/images/ray.avif" alt="Ray Donovan" class="reviewer-avatar-img">
+                <div class="local-guide-badge"><svg viewBox="0 0 24 24" fill="#fff">
+                    <path fill="#f7ab1e"
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg></div>
+              </div>
+              <div class="reviewer-details">
+                <div class="reviewer-name-row">
+                  <p class="reviewer-name">Ray Donovan</p>
+                  <img src="/images/google%20icon.avif" alt="Google" class="review-platform-icon" />
+                </div>
+                <div class="stars">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <p class="review-text">Absolutely delicious! Kimasu's use of fresh, local ingredients shines through in
+              every dish. I couldn't get enough of the poultry in my meal—it was so juicy and flavorful. Plus, their
+              house-made sauces are to die for. Already planning my next visit!"</p>
+          </div>
+
+          <div class="review-card">
+            <div class="reviewer-info">
+              <div class="reviewer-avatar-wrap">
+                <img src="/images/trang.avif" alt="Trang Nguyen" class="reviewer-avatar-img">
+                <div class="local-guide-badge"><svg viewBox="0 0 24 24" fill="#fff">
+                    <path fill="#f7ab1e"
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg></div>
+              </div>
+              <div class="reviewer-details">
+                <div class="reviewer-name-row">
+                  <p class="reviewer-name">Trang Nguyen</p>
+                  <img src="/images/google%20icon.avif" alt="Google" class="review-platform-icon" />
+                </div>
+                <div class="stars">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <p class="review-text">Located in the center complex so plenty of car park. Nice, modern GenZ setting. Food
+              are pretty good, better than I expected. Many options in the menu to choose from. I had Train to Busan
+              soba noodle with tofu... </p>
+          </div>
+
+          <div class="review-card">
+            <div class="reviewer-info">
+              <div class="reviewer-avatar-wrap">
+                <img src="/images/amanda.avif" alt="Amanda" class="reviewer-avatar-img">
+                <div class="local-guide-badge"><svg viewBox="0 0 24 24" fill="#fff">
+                    <path fill="#f7ab1e"
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg></div>
+              </div>
+              <div class="reviewer-details">
+                <div class="reviewer-name-row">
+                  <p class="reviewer-name">Amanda</p>
+                  <img src="/images/google%20icon.avif" alt="Google" class="review-platform-icon" />
+                </div>
+                <div class="stars">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="#fbbf24" stroke="#fbbf24" stroke-width="1">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <p class="review-text">Kimasu has been my go to poke spot in the Westside for years - stemming back to the
+              days when they were a little food truck called Poké time! Featured: • Chicken Katsu Sando 🌟 • Soba Mi
+              Salmon • Kimchi Fries🌟 🍉 Lychee Melon 🍓 Strawberry Yuzu</p>
+          </div>
+
+        </div>
+      </div>
+      <div class="reviews-right">
+        <img src="/images/signature-drink.avif" alt="Kimasu signature drinks" class="reviews-photo" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about-section" id="about-us">
+    <div class="about-decorations">
+      <img src="/images/neon-flowers.svg" alt="" class="neon-flower about-flower-bottom-left" aria-hidden="true" />
+      <img src="/images/neon-leaf.svg" alt="" class="neon-leaf about-leaf-top-left" aria-hidden="true" />
+      <img src="/images/neon-flowers.svg" alt="" class="neon-flower about-flower-bottom-right" aria-hidden="true" />
+      <img src="/images/neon-leaf.svg" alt="" class="neon-leaf about-leaf-top-center" aria-hidden="true" />
+    </div>
+    <div class="about-container">
+      <div class="about-content">
+        <p class="about-eyebrow">APPLY &amp; GROW</p>
+        <h2 class="about-title">KIMASU</h2>
+        <p class="about-subtitle">MODERN ASIAN EATERY</p>
+        <p class="about-text">Our commitment to quality means sourcing fresh, local ingredients like salmon, beef, and
+          poultry. We take pride in crafting much in-house – from precision-cut poké to vegetable slicing, and even
+          house-made sauces. Certain items, like our soft-boiled eggs, demand an hour of meticulous preparation.</p>
+        <a href="https://kimasumelbourne.com.au/Join-our-team" target="_blank" rel="noopener" class="btn-join-team"
+          id="btn-join-team">Join Our Team</a>
+      </div>
+      <div class="about-image">
+        <img src="/images/apply-grow.avif" alt="Kimasu signature bowl" class="about-bowl" />
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="/logo-kimasu.avif" alt="Kimasu" class="footer-logo" />
+        <div class="footer-divider"></div>
+        <a href="https://www.meandu.app/kimasu/delivery" target="_blank" rel="noopener" class="footer-order-btn">Order
+          Online</a>
+      </div>
+      <div class="footer-info">
+        <div class="footer-detail">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10" />
+            <polyline points="12 6 12 12 16 14" />
+          </svg>
+          <span>Mon - Sunday → 11:30am - 8:30pm</span>
+        </div>
+        <div class="footer-detail">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
+          <span>1042 Western Highway, Caroline Springs, Melbourne, VIC</span>
+        </div>
+        <div class="footer-detail">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.4 2 2 0 0 1 3.6 2.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.06 6.06l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 17z" />
+          </svg>
+          <a href="tel:+61412347929">+61412347929</a>
+        </div>
+        <div class="footer-detail">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+            <polyline points="22,6 12,13 2,6" />
+          </svg>
+          <a href="mailto:info@kimasumelbourne.com.au">info@kimasumelbourne.com.au</a>
+        </div>
+      </div>
+      <div class="footer-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.3!2d144.74!3d-37.73!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d3f8f7d9e0b%3A0x9b9b9b9b9b9b9b9b!2s1042%20Western%20Hwy%2C%20Caroline%20Springs%20VIC%203023!5e0!3m2!1sen!2sau!4v1700000000000"
+          width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" title="Kimasu Location"></iframe>
+      </div>
+    </div>
+    <div class="footer-social">
+      <a href="https://www.tiktok.com/@kimasu_eatery" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.35 6.35 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.76a4.85 4.85 0 01-1.01-.07z" />
+        </svg>
+      </a>
+      <a href="https://www.instagram.com/kimasu_eatery/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+        </svg>
+      </a>
+      <a href="https://www.facebook.com/kimasu.eatery" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+        </svg>
+      </a>
+    </div>
+    <div class="footer-bottom">
+      <p>Made by <a href="https://www.veloxbyte.com" target="_blank" rel="noopener">Veloxbyte</a> - Kimasu 2024</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

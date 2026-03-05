@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/logo-kimasu.avif" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Full Menu | Kimasu Melbourne</title>
+    <meta name="description"
+        content="Browse the full Kimasu menu: Sides & Sharing, Poke Bowls, Rice Bowls, Noodle Bowls, and Fries & Sliders. Modern Asian Eatery in Caroline Springs, Melbourne." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Bebas+Neue&family=Dancing+Script:wght@700&display=swap"
+        rel="stylesheet" />
+    <style>
+        /* ---- RESET & BASE ---- */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --pink-neon: #e91e8c;
+            --pink-light: #ff4db8;
+            --white: #ffffff;
+            --dark-text: #1a1a2e;
+            --grey-text: #777;
+            --light-bg: #f8f7fc;
+            --font-body: 'Inter', sans-serif;
+            --font-display: 'Bebas Neue', cursive;
+            --nav-height: 72px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: #0e0b1a;
+            color: var(--white);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* ---- NAVBAR ---- */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            height: var(--nav-height);
+            background: rgba(14, 11, 26, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(233, 30, 140, 0.2);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            height: 100%;
+            padding: 0 40px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .nav-logo {
+            flex-shrink: 0;
+        }
+
+        .logo-img {
+            height: 48px;
+            width: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 0 8px rgba(233, 30, 140, 0.4));
+        }
+
+        .nav-back {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            color: rgba(255, 255, 255, 0.75);
+            text-transform: uppercase;
+            transition: color 0.2s;
+            margin-right: auto;
+        }
+
+        .nav-back:hover {
+            color: var(--pink-light);
+        }
+
+        .nav-back svg {
+            flex-shrink: 0;
+        }
+
+        .nav-order-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 28px;
+            background: var(--pink-neon);
+            color: white;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            border-radius: 6px;
+            transition: all 0.3s;
+            box-shadow: 0 0 16px rgba(233, 30, 140, 0.4);
+        }
+
+        .nav-order-btn:hover {
+            background: var(--pink-light);
+            box-shadow: 0 0 28px rgba(233, 30, 140, 0.7);
+            transform: translateY(-1px);
+        }
+
+        /* ---- PAGE HERO ---- */
+        .menu-hero {
+            padding: 60px 40px 40px;
+            text-align: center;
+            background: linear-gradient(180deg, #0e0b1a 0%, #1a0a3c 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .menu-hero::before {
+            content: '';
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(233, 30, 140, 0.18) 0%, transparent 70%);
+            filter: blur(40px);
+            pointer-events: none;
+        }
+
+        .menu-hero-eyebrow {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.25em;
+            color: var(--pink-neon);
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .menu-hero-title {
+            font-family: var(--font-display);
+            font-size: clamp(48px, 7vw, 96px);
+            letter-spacing: 0.08em;
+            color: var(--white);
+            line-height: 1;
+            margin-bottom: 16px;
+        }
+
+        .menu-hero-title span {
+            display: inline-flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .menu-hero-title img {
+            height: clamp(36px, 5vw, 60px);
+            width: auto;
+            display: inline;
+            vertical-align: middle;
+            filter: drop-shadow(0 0 8px rgba(233, 30, 140, 0.6));
+        }
+
+        .menu-hero-subtitle {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.55);
+            letter-spacing: 0.08em;
+        }
+
+        /* ---- STICKY CATEGORY NAV ---- */
+        .cat-nav {
+            position: sticky;
+            top: var(--nav-height);
+            z-index: 100;
+            background: rgba(14, 11, 26, 0.97);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(233, 30, 140, 0.15);
+            padding: 0 40px;
+        }
+
+        .cat-nav-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            gap: 0;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+
+        .cat-nav-inner::-webkit-scrollbar {
+            display: none;
+        }
+
+        .cat-nav-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 24px;
+            background: none;
+            border: none;
+            border-bottom: 2px solid transparent;
+            color: rgba(255, 255, 255, 0.5);
+            font-family: var(--font-body);
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.25s;
+            white-space: nowrap;
+        }
+
+        .cat-nav-btn img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+            filter: grayscale(1) brightness(0.6);
+            transition: filter 0.25s;
+        }
+
+        .cat-nav-btn:hover {
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .cat-nav-btn.active {
+            color: var(--pink-neon);
+            border-bottom-color: var(--pink-neon);
+        }
+
+        .cat-nav-btn.active img {
+            filter: none;
+        }
+
+        /* ---- MAIN CONTENT ---- */
+        .menu-body {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 60px 40px 80px;
+        }
+
+        /* ---- CATEGORY SECTION ---- */
+        .menu-category-section {
+            margin-bottom: 72px;
+            scroll-margin-top: calc(var(--nav-height) + 52px);
+        }
+
+        .cat-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 36px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .cat-header-img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 10px rgba(233, 30, 140, 0.5));
+        }
+
+        .cat-header-text {}
+
+        .cat-count {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            color: var(--pink-neon);
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .cat-name {
+            font-family: var(--font-display);
+            font-size: clamp(32px, 4vw, 52px);
+            letter-spacing: 0.06em;
+            color: var(--white);
+            line-height: 1;
+        }
+
+        /* ---- ITEM GRID ---- */
+        .items-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 24px;
+        }
+
+        .item-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .item-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(233, 30, 140, 0.4);
+            box-shadow: 0 12px 40px rgba(233, 30, 140, 0.12);
+        }
+
+        .item-img-wrap {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 24px auto 0;
+            background: rgba(255, 255, 255, 0.06);
+            flex-shrink: 0;
+        }
+
+        .item-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            transition: transform 0.4s ease;
+        }
+
+        .item-card:hover .item-img-wrap img {
+            transform: scale(1.08);
+        }
+
+        .item-body {
+            padding: 16px 20px 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            text-align: center;
+        }
+
+        .item-name {
+            font-weight: 700;
+            font-size: 15px;
+            color: var(--white);
+            line-height: 1.3;
+        }
+
+        .item-desc {
+            font-size: 12.5px;
+            color: rgba(255, 255, 255, 0.45);
+            line-height: 1.6;
+            flex: 1;
+        }
+
+        .item-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 14px;
+        }
+
+        .item-price {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        .btn-order {
+            padding: 7px 16px;
+            background: transparent;
+            border: 1.5px solid rgba(233, 30, 140, 0.6);
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            color: var(--pink-neon);
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-order:hover {
+            background: var(--pink-neon);
+            color: white;
+            border-color: var(--pink-neon);
+            box-shadow: 0 0 14px rgba(233, 30, 140, 0.4);
+        }
+
+        /* ---- FOOTER CTA ---- */
+        .menu-cta {
+            text-align: center;
+            padding: 60px 40px 80px;
+            background: linear-gradient(180deg, #0e0b1a 0%, #1a0a3c 100%);
+            border-top: 1px solid rgba(233, 30, 140, 0.15);
+        }
+
+        .menu-cta p {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 24px;
+            letter-spacing: 0.05em;
+        }
+
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 16px 48px;
+            background: var(--pink-neon);
+            color: white;
+            font-family: var(--font-display);
+            font-size: 22px;
+            letter-spacing: 0.1em;
+            border-radius: 8px;
+            transition: all 0.3s;
+            box-shadow: 0 0 24px rgba(233, 30, 140, 0.45);
+        }
+
+        .cta-btn:hover {
+            background: var(--pink-light);
+            box-shadow: 0 0 40px rgba(233, 30, 140, 0.7);
+            transform: translateY(-2px);
+        }
+
+        /* ---- RESPONSIVE ---- */
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 0 20px;
+                gap: 16px;
+            }
+
+            .menu-hero {
+                padding: 40px 20px 32px;
+            }
+
+            .cat-nav {
+                padding: 0 16px;
+            }
+
+            .menu-body {
+                padding: 40px 20px 60px;
+            }
+
+            .items-grid {
+                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+                gap: 16px;
+            }
+
+            .item-img-wrap {
+                width: 110px;
+                height: 110px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="/logo-kimasu.avif" alt="Kimasu" class="logo-img" />
+            </a>
+            <a href="/" class="nav-back">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="15 18 9 12 15 6" />
+                </svg>
+                Back to Home
+            </a>
+            <a href="https://www.meandu.app/kimasu/delivery" target="_blank" rel="noopener" class="nav-order-btn">ORDER
+                ONLINE</a>
+        </div>
+    </nav>
+
+    <!-- PAGE HERO -->
+    <header class="menu-hero">
+        <p class="menu-hero-eyebrow">Modern Asian Eatery · Caroline Springs</p>
+        <h1 class="menu-hero-title">
+            <span>KIMASU MENU <img src="/images/chopstick-icon.avif" alt="" /></span>
+        </h1>
+        <p class="menu-hero-subtitle">All categories · Fresh ingredients · House-made sauces</p>
+    </header>
+
+    <!-- STICKY CATEGORY NAV -->
+    <nav class="cat-nav" aria-label="Menu categories">
+        <div class="cat-nav-inner">
+            <button class="cat-nav-btn active" data-target="sides" id="catnav-sides">
+                <img src="/images/menu-categories/cat-sides.svg" alt="" />
+                Sides &amp; Sharing
+            </button>
+            <button class="cat-nav-btn" data-target="poke" id="catnav-poke">
+                <img src="/images/menu-categories/cat-poke.svg" alt="" />
+                Poke Bowls
+            </button>
+            <button class="cat-nav-btn" data-target="rice" id="catnav-rice">
+                <img src="/images/menu-categories/cat-rice.svg" alt="" />
+                Rice Bowls
+            </button>
+            <button class="cat-nav-btn" data-target="noodles" id="catnav-noodles">
+                <img src="/images/menu-categories/cat-noodles.svg" alt="" />
+                Noodle Bowls
+            </button>
+            <button class="cat-nav-btn" data-target="fries" id="catnav-fries">
+                <img src="/images/menu-categories/cat-fries.png" alt="" />
+                Fries &amp; Sliders
+            </button>
+        </div>
+    </nav>
+
+    <!-- MENU BODY -->
+    <main class="menu-body" id="menu-body">
+        <!-- Injected by JS -->
+    </main>
+
+    <!-- FOOTER CTA -->
+    <section class="menu-cta">
+        <p>Ready to enjoy Kimasu?</p>
+        <a href="https://www.meandu.app/kimasu/delivery" target="_blank" rel="noopener" class="cta-btn">ORDER ONLINE
+            NOW</a>
+    </section>
+
+    <script type="module">
+        const menuData = {
+            sides: {
+                label: 'Sides & Sharing',
+                img: '/images/menu-categories/cat-sides.svg',
+                items: [
+                    { name: 'Takoyaki', desc: 'Classic Japanese octopus balls, crispy outside & soft inside.', price: '$12.90', img: '/images/menu/takoyaki.png' },
+                    { name: 'Potato Croquettes', desc: 'Golden-fried Japanese-style potato croquettes.', price: '$8.90', img: '/images/menu/potato-croquettes.png' },
+                    { name: 'Kimchi', desc: 'Traditional fermented Korean kimchi.', price: '$4.90', img: '/images/menu/kimchi.png' },
+                    { name: 'Seaweed Salad', desc: 'Fresh seasoned seaweed salad with sesame.', price: '$6.90', img: '/images/menu/seaweed-salad.png' },
+                    { name: 'Crab Salad', desc: 'Creamy crab salad with Japanese mayo.', price: '$7.90', img: '/images/menu/crab-salad.png' },
+                    { name: 'Vege Spring Rolls', desc: 'Crispy vegetable spring rolls with dipping sauce.', price: '$8.90', img: '/images/menu/vege-spring-rolls.png' },
+                    { name: 'Prawn Tempura', desc: 'Lightly battered crispy prawn tempura.', price: '$12.90', img: '/images/menu/prawn-tempura.jpeg' },
+                    { name: 'Salmon Sashimi (6 pcs)', desc: 'Fresh premium salmon sashimi, 6 pieces.', price: '$14.90', img: '/images/menu/salmon-sashimi-6-pcs.jpeg' },
+                    { name: 'Salmon Sashimi (12 pcs)', desc: 'Fresh premium salmon sashimi, 12 pieces.', price: '$26.90', img: '/images/menu/salmon-sashimi-12-pcs.jpeg' },
+                    { name: 'Seared Salmon (5 pcs)', desc: 'Torched seared salmon, 5 pieces.', price: '$16.90', img: '/images/menu/seared-salmon-5pcs.png' },
+                    { name: 'Seared Salmon (8 pcs)', desc: 'Torched seared salmon, 8 pieces.', price: '$24.90', img: '/images/menu/seared-salmon-8pcs.png' },
+                ]
+            },
+            poke: {
+                label: 'Poke Bowls',
+                img: '/images/menu-categories/cat-poke.svg',
+                items: [
+                    { name: 'Aloha Poke', desc: 'Hawaiian-inspired poke bowl with fresh salmon & mango.', price: '$18.90', img: '/images/menu/aloha-poke.png' },
+                    { name: 'Hawaiian Poke', desc: 'Classic Hawaiian poke with sashimi-grade fish.', price: '$18.90', img: '/images/menu/hawaiian-poke.png' },
+                    { name: 'Busan Style Poke', desc: 'Korean-inspired poke bowl with spicy gochujang.', price: '$18.90', img: '/images/menu/busan-style-poke.webp' },
+                    { name: 'Spicy Cali Poke', desc: 'California-style spicy poke with avocado.', price: '$18.90', img: '/images/menu/spicy-cali-poke.png' },
+                    { name: 'Sesame Tofu Poke', desc: 'Crispy sesame tofu poke with fresh vegetables.', price: '$17.90', img: '/images/menu/sesame-tofu-poke.png' },
+                    { name: 'Pulled Chicken Poke', desc: 'Tender pulled chicken poke with Asian slaw.', price: '$17.90', img: '/images/menu/pulled-chicken-poke.png' },
+                    { name: 'Tuna Poke', desc: 'Premium sashimi-grade tuna poke bowl.', price: '$19.90', img: '/images/menu/tuna-poke.jpeg' },
+                    { name: 'Build Your Own Bowl', desc: 'Customise your own poke bowl with your favourite toppings.', price: '$16.90', img: '/images/menu/build-your-own-bowl.png' },
+                ]
+            },
+            rice: {
+                label: 'Rice Bowls',
+                img: '/images/menu-categories/cat-rice.svg',
+                items: [
+                    { name: 'Chicken Katsu Bowl', desc: 'Crispy chicken katsu over Japanese rice with tonkatsu sauce.', price: '$17.90', img: '/images/menu/chicken-katsu-bowl.png' },
+                    { name: 'Pork Katsu Bowl', desc: 'Golden pork katsu over Japanese rice with tonkatsu sauce.', price: '$17.90', img: '/images/menu/pork-katsu-bowl.png' },
+                    { name: 'Crispy Tofu Bowl', desc: 'Crispy tofu over Japanese rice with teriyaki glaze.', price: '$16.90', img: '/images/menu/crispy-tofu-bowl.png' },
+                    { name: 'Chicken Katsu Curry', desc: 'Chicken katsu served with rich Japanese curry & rice.', price: '$18.90', img: '/images/menu/chicken-katsu-curry.png' },
+                    { name: 'Pork Katsu Curry', desc: 'Pork katsu served with rich Japanese curry & rice.', price: '$18.90', img: '/images/menu/pork-katsu-curry.png' },
+                    { name: 'Crispy Tofu Curry', desc: 'Crispy tofu served with rich Japanese curry & rice.', price: '$17.90', img: '/images/menu/crispy-tofu-curry.png' },
+                    { name: 'Croquette Curry', desc: 'Potato croquettes with Japanese curry & rice.', price: '$17.90', img: '/images/menu/croquette-curry.png' },
+                    { name: 'Sweet Beef Gyudon', desc: 'Sweet soy-braised beef over Japanese rice.', price: '$18.90', img: '/images/menu/sweet-beef-gyudon.png' },
+                    { name: 'Teriyaki Beef', desc: 'Grilled teriyaki beef over steamed rice.', price: '$18.90', img: '/images/menu/teriyaki-beef.png' },
+                ]
+            },
+            noodles: {
+                label: 'Noodle Bowls',
+                img: '/images/menu-categories/cat-noodles.svg',
+                items: [
+                    { name: 'Chicken Katsu Spicy', desc: 'Chicken katsu with spicy Korean-style noodles.', price: '$18.90', img: '/images/menu/chicken-katsu-spicy.png' },
+                    { name: 'Pork Katsu', desc: 'Pork katsu with savoury noodle bowl.', price: '$18.90', img: '/images/menu/pork-katsu.png' },
+                    { name: 'Chicken Katsu', desc: 'Chicken katsu with classic noodle broth.', price: '$18.90', img: '/images/menu/chicken-katsu.png' },
+                    { name: 'Soba Bonito Tofu', desc: 'Cold soba noodles with bonito flakes & crispy tofu.', price: '$17.90', img: '/images/menu/soba-bonito-tofu.png' },
+                    { name: 'Beef Udon', desc: 'Thick udon noodles in rich beef broth.', price: '$18.90', img: '/images/menu/beef-udon.png' },
+                    { name: 'Crispy Prawns Udon', desc: 'Udon noodles topped with crispy tempura prawns.', price: '$18.90', img: '/images/menu/crispy-prawns-udon.png' },
+                    { name: 'Chicken Udon Gyudon', desc: 'Udon noodles with chicken & sweet soy gyudon style.', price: '$18.90', img: '/images/menu/chicken-udon-gyudon.png' },
+                    { name: 'Pork Udon Gyudon', desc: 'Udon noodles with pork in sweet soy gyudon style.', price: '$18.90', img: '/images/menu/pork-udon-gyudon.png' },
+                ]
+            },
+            fries: {
+                label: 'Fries & Sliders',
+                img: '/images/menu-categories/cat-fries.png',
+                items: [
+                    { name: 'Simple Fries', desc: 'Classic golden fries with seasoning.', price: '$7.90', img: '/images/menu/simple-fries.png' },
+                    { name: 'KSP Fries', desc: 'Korean spicy popcorn chicken loaded fries.', price: '$14.90', img: '/images/menu/ksp-fries.png' },
+                    { name: 'Kimchi Loaded Fries', desc: 'Loaded fries topped with kimchi & sauces.', price: '$14.90', img: '/images/menu/kimchi-loaded-fries.png' },
+                    { name: 'Mi Goreng Loaded Fries', desc: 'Loaded fries with mi goreng seasoning.', price: '$14.90', img: '/images/menu/mi-goreng-loaded-fries.png' },
+                    { name: 'Curry Katsu Loaded Fries', desc: 'Loaded fries with katsu & Japanese curry.', price: '$15.90', img: '/images/menu/curry-katsu-loaded-fries.png' },
+                    { name: 'Chicken Katsu Sliders', desc: 'Mini chicken katsu sliders with slaw.', price: '$14.90', img: '/images/menu/chicken-katsu-sliders.png' },
+                    { name: 'Pork Katsu Sliders', desc: 'Mini pork katsu sliders with slaw.', price: '$14.90', img: '/images/menu/pork-katsu-sliders.png' },
+                    { name: 'Ebi Sliders', desc: 'Crispy prawn ebi sliders.', price: '$14.90', img: '/images/menu/ebi-sliders.png' },
+                    { name: 'Pulled Pork Sliders', desc: 'Tender pulled pork sliders with Asian slaw.', price: '$14.90', img: '/images/menu/pulled-pork-sliders.png' },
+                    { name: 'Cheesey Croquette Sliders', desc: 'Cheesy potato croquette sliders.', price: '$13.90', img: '/images/menu/cheesey-croquette-sliders.png' },
+                ]
+            }
+        };
+
+        // Build all category sections
+        const body = document.getElementById('menu-body');
+        Object.entries(menuData).forEach(([key, cat]) => {
+            const section = document.createElement('section');
+            section.className = 'menu-category-section';
+            section.id = `cat-${key}`;
+            section.innerHTML = `
+        <div class="cat-header">
+          <img src="${cat.img}" alt="${cat.label}" class="cat-header-img" />
+          <div class="cat-header-text">
+            <p class="cat-count">${cat.items.length} items</p>
+            <h2 class="cat-name">${cat.label.toUpperCase()}</h2>
+          </div>
+        </div>
+        <div class="items-grid">
+          ${cat.items.map(item => `
+            <div class="item-card">
+              <div class="item-img-wrap">
+                <img src="${item.img}" alt="${item.name}" loading="lazy" />
+              </div>
+              <div class="item-body">
+                <p class="item-name">${item.name}</p>
+                <p class="item-desc">${item.desc}</p>
+                <div class="item-footer">
+                  <span class="item-price">${item.price}</span>
+                  <a href="https://www.meandu.app/kimasu/delivery" target="_blank" rel="noopener" class="btn-order">Order</a>
+                </div>
+              </div>
+            </div>`).join('')}
+        </div>`;
+            body.appendChild(section);
+        });
+
+        // Sticky category nav — highlight active on scroll
+        const catNavBtns = document.querySelectorAll('.cat-nav-btn');
+        const stickyOffset = 72 + 52 + 20;
+
+        function setActiveNav(key) {
+            catNavBtns.forEach(b => b.classList.remove('active'));
+            const btn = document.querySelector(`.cat-nav-btn[data-target="${key}"]`);
+            if (btn) btn.classList.add('active');
+        }
+
+        // Click → scroll to section
+        catNavBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const target = document.getElementById(`cat-${btn.dataset.target}`);
+                if (target) {
+                    const top = target.getBoundingClientRect().top + window.scrollY - stickyOffset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Scroll → update active nav
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const key = entry.target.id.replace('cat-', '');
+                    setActiveNav(key);
+                }
+            });
+        }, { rootMargin: `-${stickyOffset}px 0px -60% 0px` });
+
+        Object.keys(menuData).forEach(key => {
+            const el = document.getElementById(`cat-${key}`);
+            if (el) observer.observe(el);
+        });
+    </script>
+
+</body>
+
+</html>
