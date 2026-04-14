@@ -85,7 +85,7 @@ function renderMenuItems(category) {
         <p class="menu-item-desc">${item.desc}</p>
         <div class="menu-item-footer">
           <span class="menu-item-price">${item.price}</span>
-          <a href="https://www.meandu.app/kimasu/delivery" target="_blank" rel="noopener" class="btn-add-item">ORDER</a>
+          <a href="https://kimasu-cs.square.site" target="_blank" rel="noopener" class="btn-add-item">ORDER</a>
         </div>
       </div>
     </div>`
